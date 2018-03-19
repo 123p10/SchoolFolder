@@ -12,7 +12,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </lib>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -44,7 +50,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </tool>
     <sep/>
     <tool lib="0" name="Pin">
-      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
     </tool>
     <tool lib="0" name="Pin">
@@ -65,17 +70,30 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(220,330)" to="(220,400)"/>
     <wire from="(140,210)" to="(140,220)"/>
+    <wire from="(230,400)" to="(230,410)"/>
+    <wire from="(250,410)" to="(250,420)"/>
     <wire from="(110,110)" to="(110,120)"/>
+    <wire from="(260,530)" to="(260,540)"/>
+    <wire from="(260,540)" to="(260,550)"/>
+    <wire from="(320,430)" to="(320,440)"/>
+    <wire from="(200,330)" to="(200,410)"/>
+    <wire from="(240,330)" to="(240,410)"/>
     <wire from="(130,110)" to="(130,130)"/>
+    <wire from="(240,440)" to="(240,530)"/>
     <wire from="(120,130)" to="(120,220)"/>
     <wire from="(100,120)" to="(100,220)"/>
     <wire from="(150,110)" to="(150,210)"/>
+    <wire from="(220,440)" to="(220,540)"/>
+    <wire from="(230,440)" to="(230,540)"/>
     <wire from="(160,110)" to="(160,220)"/>
     <wire from="(190,110)" to="(190,220)"/>
     <wire from="(200,110)" to="(200,220)"/>
     <wire from="(230,110)" to="(230,220)"/>
     <wire from="(240,110)" to="(240,220)"/>
+    <wire from="(200,410)" to="(220,410)"/>
+    <wire from="(240,530)" to="(260,530)"/>
     <wire from="(250,230)" to="(330,230)"/>
     <wire from="(140,210)" to="(150,210)"/>
     <wire from="(160,110)" to="(170,110)"/>
@@ -83,32 +101,67 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(200,110)" to="(210,110)"/>
     <wire from="(220,220)" to="(230,220)"/>
     <wire from="(240,110)" to="(250,110)"/>
+    <wire from="(220,400)" to="(230,400)"/>
+    <wire from="(230,540)" to="(240,540)"/>
     <wire from="(100,120)" to="(110,120)"/>
     <wire from="(120,130)" to="(130,130)"/>
-    <comp lib="0" loc="(150,110)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(250,110)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp loc="(250,230)" name="Palindrome"/>
-    <comp lib="0" loc="(130,110)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
+    <wire from="(250,430)" to="(320,430)"/>
+    <wire from="(250,410)" to="(320,410)"/>
+    <comp lib="6" loc="(365,445)" name="Text">
+      <a name="text" val="B wins"/>
     </comp>
     <comp lib="0" loc="(210,110)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="6" loc="(120,62)" name="Text">
+      <a name="text" val="Palindrome"/>
+    </comp>
     <comp lib="0" loc="(230,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(130,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(190,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(150,110)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(170,110)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(220,330)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(240,330)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(200,330)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(240,540)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(219,293)" name="Text">
+      <a name="text" val="Rock Paper Scissors"/>
+    </comp>
+    <comp lib="0" loc="(250,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(365,412)" name="Text">
+      <a name="text" val="A wins"/>
     </comp>
     <comp lib="0" loc="(330,230)" name="Pin">
       <a name="facing" val="west"/>
@@ -119,10 +172,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(190,110)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp loc="(250,230)" name="Palindrome"/>
+    <comp lib="0" loc="(320,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(220,540)" name="Pin">
+      <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="6" loc="(240,604)" name="Text">
+      <a name="text" val="Rock Paper Scissors"/>
+    </comp>
+    <comp lib="0" loc="(320,410)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,540)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(250,420)" name="Rock Paper Scissors"/>
   </circuit>
   <circuit name="Palindrome">
     <a name="circuit" val="Palindrome"/>
@@ -186,19 +258,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(270,440)" to="(400,440)"/>
     <wire from="(120,250)" to="(190,250)"/>
     <wire from="(450,250)" to="(520,250)"/>
-    <comp lib="1" loc="(270,330)" name="XNOR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(270,440)" name="XNOR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(120,450)" name="Pin">
+    <comp lib="0" loc="(120,350)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(120,250)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(120,140)" name="Pin">
+    <comp lib="0" loc="(120,200)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(120,450)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(520,250)" name="Pin">
@@ -206,14 +275,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(270,160)" name="XNOR Gate">
+    <comp lib="1" loc="(270,440)" name="XNOR Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(450,250)" name="AND Gate">
       <a name="inputs" val="4"/>
-    </comp>
-    <comp lib="0" loc="(120,350)" name="Pin">
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(120,510)" name="Pin">
       <a name="tristate" val="false"/>
@@ -221,13 +287,19 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(270,230)" name="XNOR Gate">
       <a name="inputs" val="2"/>
     </comp>
+    <comp lib="1" loc="(270,160)" name="XNOR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(120,400)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
     <comp lib="0" loc="(120,300)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(120,200)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="1" loc="(270,330)" name="XNOR Gate">
+      <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(120,400)" name="Pin">
+    <comp lib="0" loc="(120,140)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
   </circuit>
@@ -241,7 +313,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(280,140)" to="(280,150)"/>
     <wire from="(530,180)" to="(530,250)"/>
     <wire from="(430,130)" to="(430,150)"/>
-    <wire from="(200,360)" to="(370,360)"/>
     <wire from="(480,330)" to="(590,330)"/>
     <wire from="(480,350)" to="(590,350)"/>
     <wire from="(170,530)" to="(170,560)"/>
@@ -250,31 +321,31 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(390,420)" to="(430,420)"/>
     <wire from="(170,530)" to="(200,530)"/>
     <wire from="(270,460)" to="(270,560)"/>
+    <wire from="(370,180)" to="(370,410)"/>
     <wire from="(310,210)" to="(310,370)"/>
     <wire from="(480,200)" to="(510,200)"/>
     <wire from="(480,440)" to="(510,440)"/>
     <wire from="(280,160)" to="(310,160)"/>
     <wire from="(310,170)" to="(340,170)"/>
+    <wire from="(200,360)" to="(420,360)"/>
     <wire from="(200,360)" to="(200,530)"/>
     <wire from="(410,220)" to="(430,220)"/>
     <wire from="(410,460)" to="(430,460)"/>
     <wire from="(510,160)" to="(530,160)"/>
-    <wire from="(220,410)" to="(430,410)"/>
     <wire from="(390,190)" to="(390,230)"/>
     <wire from="(270,460)" to="(410,460)"/>
     <wire from="(420,360)" to="(430,360)"/>
     <wire from="(410,220)" to="(410,460)"/>
     <wire from="(510,370)" to="(590,370)"/>
     <wire from="(390,230)" to="(390,420)"/>
-    <wire from="(370,170)" to="(370,360)"/>
-    <wire from="(370,170)" to="(430,170)"/>
     <wire from="(510,370)" to="(510,440)"/>
+    <wire from="(370,410)" to="(430,410)"/>
     <wire from="(530,140)" to="(530,150)"/>
     <wire from="(180,140)" to="(180,210)"/>
     <wire from="(480,150)" to="(530,150)"/>
     <wire from="(480,250)" to="(530,250)"/>
-    <wire from="(370,360)" to="(420,360)"/>
     <wire from="(580,160)" to="(640,160)"/>
+    <wire from="(400,170)" to="(400,180)"/>
     <wire from="(480,330)" to="(480,340)"/>
     <wire from="(310,160)" to="(310,170)"/>
     <wire from="(280,150)" to="(280,160)"/>
@@ -284,6 +355,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(390,230)" to="(430,230)"/>
     <wire from="(230,190)" to="(390,190)"/>
     <wire from="(340,320)" to="(430,320)"/>
+    <wire from="(400,170)" to="(430,170)"/>
+    <wire from="(370,180)" to="(400,180)"/>
+    <wire from="(220,410)" to="(370,410)"/>
     <wire from="(280,150)" to="(430,150)"/>
     <wire from="(510,160)" to="(510,200)"/>
     <wire from="(480,350)" to="(480,390)"/>
@@ -294,40 +368,54 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(580,160)" name="OR Gate">
+    <comp lib="6" loc="(226,102)" name="Text">
+      <a name="text" val="Paper"/>
+    </comp>
+    <comp lib="1" loc="(480,250)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(480,150)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(640,350)" name="OR Gate">
       <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(270,560)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(180,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(170,560)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(480,440)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(640,350)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(480,250)" name="AND Gate">
-      <a name="inputs" val="2"/>
+    <comp lib="6" loc="(179,105)" name="Text">
+      <a name="text" val="Rock"/>
+    </comp>
+    <comp lib="1" loc="(580,160)" name="OR Gate">
+      <a name="inputs" val="3"/>
     </comp>
     <comp lib="0" loc="(220,560)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(270,560)" name="Pin">
-      <a name="facing" val="north"/>
+    <comp lib="0" loc="(280,140)" name="Pin">
+      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(480,390)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(179,105)" name="Text">
-      <a name="text" val="Rock"/>
-    </comp>
-    <comp lib="1" loc="(480,150)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(480,200)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(170,560)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
+    <comp lib="6" loc="(278,97)" name="Text">
+      <a name="text" val="Scissors"/>
     </comp>
     <comp lib="1" loc="(480,340)" name="AND Gate">
       <a name="inputs" val="2"/>
@@ -337,25 +425,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(480,440)" name="AND Gate">
+    <comp lib="1" loc="(480,200)" name="AND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(640,350)" name="OR Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(180,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(280,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(226,102)" name="Text">
-      <a name="text" val="Paper"/>
-    </comp>
-    <comp lib="6" loc="(278,97)" name="Text">
-      <a name="text" val="Scissors"/>
+    <comp lib="1" loc="(480,390)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
