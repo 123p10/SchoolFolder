@@ -45,8 +45,8 @@ int multiple(int num, int den)
 }
 int gcd(int numerator,int denominator){
   int remainder;
-  int a = multiple(numerator, denominator);
-
+//  int a = multiple(numerator, denominator);
+  int a = numerator/denominator;
   //Euclids algorithim breaks out when it reachs 0 so the while loop breaks when this happens
   while ((denominator - a*numerator) != 0)
   {
@@ -54,7 +54,7 @@ int gcd(int numerator,int denominator){
     //denominator = numerator * a + remainder
     //thus
     //remainder = denominator - numerator*a
-    remainder = denominator - a*numerator;
+    remainder = denominator % numerator;
 
     //We then reset the values to call multiple again and loop
     denominator = numerator;
