@@ -20,7 +20,6 @@ int main(void){
     printf(" *** ");
   }
   printf("\n");
-
   if(numbers[input][1] == 1 && numbers[input][6]){
     printf("*   *\n");
     printf("*   *\n");
