@@ -16,6 +16,9 @@ p = []
 ch = []
 v = []
 ca = []
+
+slotChance = [0,0,0,0,0,0,0]
+
 runningPayout = []
 profitOverTime = []
 with open('commaReal.csv') as csv_file:
@@ -69,7 +72,10 @@ with open('commaReal.csv') as csv_file:
             losses += 1
             anchovies += 1
             runningPayout.append(0)
+
         profitOverTime.append(cost*numRows - totalCashGivenOut)
+        if row[0] != "Anchovie":
+            slotChance[int(row[2])-1] += 1
     cashGained = numRows * cost
     profit = cashGained - totalCashGivenOut
     ratio = wins/numRows
@@ -83,7 +89,13 @@ with open('commaReal.csv') as csv_file:
     print(f"Wins = {wins} \nLosses = {losses}")
 
 
-    typeOfGraph = 3
+    typeOfGraph = 6
+    #0 bar graph of all the winnings given out
+    #1 Tracking profit over time
+    #2 Number of spins
+    #3 Probability of spin
+    #
+    #
     if typeOfGraph == 0:
         plt.title('Cash Prizes Given Out')
         plt.ylabel("Winnings")
@@ -115,4 +127,32 @@ with open('commaReal.csv') as csv_file:
         labels = 'Pepperoni','Cheese','Canadian','Veggie','Anchovies'
         sizes = [len(p),len(ch),len(ca),len(v),anchovies]
         plt.pie(sizes,labels=labels,autopct='%1.1f%%',shadow=True)
+        plt.show()
+    elif typeOfGraph == 4:
+        plt.title("Empirical Analysis of Where the Chip Fell")
+        plt.xlabel("Slot Number")
+        plt.ylabel("Number of Falls")
+        heights = slotChance
+        bars = (range(1,8))
+        y_pos = np.arange(len(bars))
+        plt.bar(y_pos, heights)
+        plt.xticks(y_pos, bars)
+        plt.show()
+    elif typeOfGraph == 5:
+        plt.title("Empirical Analysis of Where the Chip Fell")
+        plt.xlabel("Slot Number")
+        plt.ylabel("Number of Falls")
+        heights = slotChance
+        bars = (range(1,8))
+        plt.pie(heights,labels=bars,autopct='%1.1f%%',shadow=True)
+        plt.show()
+    elif typeOfGraph == 6:
+        plt.title("Theoretical Expectation of Where the Chip Should Fall")
+        plt.xlabel("Slot Number")
+        plt.ylabel("Number of Falls")
+        heights = [637,1911,2989,3430,2989,1911,647]
+        bars = (range(1,8))
+        y_pos = np.arange(len(bars))
+        plt.bar(y_pos, heights)
+        plt.xticks(y_pos, bars)
         plt.show()
