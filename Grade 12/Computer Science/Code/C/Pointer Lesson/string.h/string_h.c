@@ -4,26 +4,37 @@
 #include "userinterface.h"
 //Make sure to add comments
 
+void decodeHuffmanString();
+
+
 int main(void) {
-  char* arr = "bonjour";
-  promptForBinaryString(arr);
-  printf("%s",arr);
-  char *inputString = "110101010111110101111110";
-  char letters[20] = {'C','B','A','F'};
-  char *values[20] = {"0","111","11010","10"};
-  char *curr= (char*)calloc(250, sizeof(char));
-  struct node* node = constructBinaryTree(letters,values);
-  int count = 0;
-  char value;
-  for(int i = 0;i < str_len(inputString);i++){
-    curr[count] = inputString[i];
-    value = getValueAtCode(node,curr);
-    if(value != '\0'){
-      printf("%c",value);
-      curr = (char*)calloc(250, sizeof(char));
-      count = 0;
-    }
-    else{count++;}
+  int option = menuScreen();
+  switch(option){
+    case 1:
+      decodeHuffmanString();
+      break;
+    case 2:
+      printf("TBD");
+      break;
+    case 3:
+      return 1;
   }
+
+  printf("\nNo Errors");
   return 0;
+}
+
+void decodeHuffmanString(){
+  char letters[20];
+  char *values[20] = {"A","B"};
+  getInputForHuffmanEncoding(letters,values);
+
+  printf("input made");
+  printf("%s",values[0]);
+  struct node* node = constructBinaryTree(letters,values);
+  //printf("tree made");
+  decodeString("0111",letters,values,node);
+  //printf("string made");
+
+//  pre_order_traversal(node);
 }

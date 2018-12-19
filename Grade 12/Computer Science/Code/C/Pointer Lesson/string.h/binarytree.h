@@ -68,6 +68,7 @@ struct node* constructBinaryTree(char* letters,char** values){
 }
 struct node* addBranchForLetter(struct node* root,char letter,char *value){
   struct node* ref = root;
+//  printf("%s",value);
   for(int i = 0;i < str_len(value);i++){
     if(value[i] == '0'){
       if(ref->zero == NULL){
@@ -76,6 +77,7 @@ struct node* addBranchForLetter(struct node* root,char letter,char *value){
       ref = ref->zero;
     }
     if(value[i] == '1'){
+
       if(ref->one == NULL){
         ref->one = newNode('\0');
       }
@@ -83,7 +85,6 @@ struct node* addBranchForLetter(struct node* root,char letter,char *value){
     }
   }
   ref->data = letter;
-
   return root;
 }
 char getValueAtCode(struct node* root,char *string){
@@ -98,6 +99,25 @@ char getValueAtCode(struct node* root,char *string){
     }
   }
   return root->data;
+}
+
+char* decodeString(char* inputString,char *letters,char **values,struct node* node){
+
+  char *curr= (char*)calloc(250, sizeof(char));
+  int count = 0;
+  char value;
+  for(int i = 0;i < str_len(inputString);i++){
+    curr[count] = inputString[i];
+    value = getValueAtCode(node,curr);
+    //printf("%d",i);
+    if(value != '\0'){
+      printf("%c",value);
+      curr = (char*)calloc(250, sizeof(char));
+      count = 0;
+    }
+    else{count++;}
+  }
+
 }
 
 #endif
