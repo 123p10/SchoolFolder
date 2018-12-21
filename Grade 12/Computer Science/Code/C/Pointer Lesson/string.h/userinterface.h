@@ -21,19 +21,18 @@ int menuScreen(){
   printf("\n");
   return option;
 }
-void getInputForHuffmanEncoding(char *letters,char* values[]){
-  int num = 0;
+void getInputForHuffmanEncoding(char **letters,char** values[],int *num){
   //values[0] = "HI";
 
   printf("How many codes do you want for your cipher?\n");
   scanf("%d",&num);
-  for(int i = 0;i < num;i++){
-    char temp[20] = "";
+  for(int i = 0;i < *num;i++){
+    char temp[30];
     printf("The %d char: ",i+1);
-    scanf(" %c %s",&letters[i],&temp);
-    printf("%s",temp);
-    strcpy(values[i],temp);
-    printf("%s",values[i]);
+    scanf(" %c",&letters[i]);
+    scanf(" %s",temp);
+  //  strcpy(values[i],temp);
+    *values[i] = temp;
     printf("\n");
   }
 

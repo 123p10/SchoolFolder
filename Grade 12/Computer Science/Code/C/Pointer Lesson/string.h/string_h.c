@@ -25,10 +25,21 @@ int main(void) {
 }
 
 void decodeHuffmanString(){
-  char letters[20];
-  char *values[20] = {"A","B"};
-  getInputForHuffmanEncoding(letters,values);
+  int num = 0;
+  char *letters = (char*)calloc(20, sizeof(char));
+  char values[20][50] = (char[][])calloc(20*50, sizeof(char));
 
+  printf("How many codes do you want for your cipher?\n");
+  scanf("%d",&num);
+  for(int i = 0;i < num;i++){
+    printf("The %d char: ",i+1);
+    scanf(" %c",&letters[i]);
+    scanf("%s",values[i]);
+    printf("%d",&values[i][0]));
+    printf("\n");
+  }
+
+//  getInputForHuffmanEncoding(&letters,&values,num);
   printf("input made");
   printf("%s",values[0]);
   struct node* node = constructBinaryTree(letters,values);
