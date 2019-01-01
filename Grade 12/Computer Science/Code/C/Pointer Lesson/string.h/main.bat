@@ -1,2 +1,2 @@
-gcc string_h.c
+gcc string_h.c -w
 a.exe
