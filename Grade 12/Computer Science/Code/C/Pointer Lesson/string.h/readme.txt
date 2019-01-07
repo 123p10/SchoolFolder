@@ -1,5 +1,6 @@
 Using the program:
-Run main.bat it will compile and run the program
+Run main.bat it will compile and run the program,
+gcc required
 
 Explanation of Decoder
 The program takes in a dictionary of codes in the format:
